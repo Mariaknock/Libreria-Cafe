@@ -1,4 +1,4 @@
-
+package Cliente;
 import java.util.ArrayList;
 import java.util.Random;
 public class Cuenta{
