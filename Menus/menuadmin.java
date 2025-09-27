@@ -2,6 +2,7 @@ package Menus;
 import Cliente.*;
 import Articulos.*;
 import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -9,8 +10,8 @@ import java.util.Scanner;
 public class menuadmin {
     Scanner scanner = new Scanner(System.in);
     Inventario inventario=new Inventario();
+    ArrayList<Cliente> clientes=new ArrayList<>();
     Map<Integer, Libro> libros = inventario.getLibros();
-
     int claveAcceso=1234;
     int numero;
     int opcion;
