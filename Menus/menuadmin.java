@@ -92,7 +92,7 @@ public class menuadmin {
                     System.out.printf("%-5s %-25s %-30s\n", "ID", "NOMBRE", "CORREO");
                     for (int i = 0; i < clientes.size(); i++) {
                         Cliente c = clientes.get(i);
-                        System.out.printf("%-5d %-25s %-30s $%-15.2f\n", i, c.getNombre(), c.getCorreo());
+                        System.out.printf("%-5d %-25s %-30s\n", i, c.getNombre(), c.getCorreo());
                     }
                 }
                     break;
