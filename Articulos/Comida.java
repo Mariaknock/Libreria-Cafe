@@ -51,7 +51,7 @@ public class Comida {
         return cantidad;
     }
 
-    public void setCantidad(boolean disponibilidad){
+    public void setCantidad(int cantidad){
         this.cantidad=cantidad;
     }
 
