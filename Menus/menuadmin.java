@@ -89,7 +89,7 @@ public class menuadmin {
                     if(clientes.isEmpty()){
                         System.out.println("No hay clientes existentes");
                     }else{
-                    System.out.printf("%-5s %-25s %-30s %-15s\n", "ID", "NOMBRE", "CORREO");
+                    System.out.printf("%-5s %-25s %-30s\n", "ID", "NOMBRE", "CORREO");
                     for (int i = 0; i < clientes.size(); i++) {
                         Cliente c = clientes.get(i);
                         System.out.printf("%-5d %-25s %-30s $%-15.2f\n", i, c.getNombre(), c.getCorreo());
@@ -188,8 +188,5 @@ public class menuadmin {
         }else{
             System.out.println(libros.get(idLibro).getTituloLibro()+ " YA NO HAY EN STOCK");
         }
-
     }
-
-
 }
