@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 //hola yo soy yo
 
+// arriba el Barcelona
+
 
 
 public class menuadmin {
