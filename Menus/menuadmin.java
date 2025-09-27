@@ -1,5 +1,5 @@
 package Menus;
-import Cliente;
+import Cliente.*;
 import Articulos.*;
 import java.util.HashMap;
 import java.util.Map;
