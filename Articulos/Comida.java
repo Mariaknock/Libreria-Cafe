@@ -3,10 +3,10 @@ public class Comida {
 
     private String nombre;
     private String tamaño;
-    private int precio;
+    private double precio;
     private String categoria;
     private int cantidad;
-    public Comida(String nombre, String tamaño, int precio, String categoria, int cantidad){
+    public Comida(String nombre, String tamaño, double precio, String categoria, int cantidad){
 
         this.nombre=nombre;
         this.tamaño=tamaño;
@@ -31,7 +31,7 @@ public class Comida {
         this.tamaño=tamaño;
     }
 
-    public int getPrecio(){
+    public double getPrecio(){
         return precio;
     }
 

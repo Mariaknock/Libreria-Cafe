@@ -6,26 +6,34 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
 public class menuadmin {
-    Scanner scanner = new Scanner(System.in);
-    Inventario inventario=new Inventario();
-    ArrayList<Cliente> clientes=new ArrayList<>();
-    Map<Integer, Libro> libros = inventario.getLibros();
-    int claveAcceso=1234;
-    int numero;
-    int opcion;
-    int idLibro;
+    private Scanner scanner = new Scanner(System.in);
+    private Inventario inventario=new Inventario();
+    private ArrayList<Cliente> clientes=new ArrayList<>();
+    private Map<Integer, Libro> libros = inventario.getLibros();
+    private int claveAcceso=1234;
+    private int numero;
+    private int opcion;
+    private int idLibro;
 
     //libros
-    String tituloLibro;
-    int numPaginas;
-    String editorial;
-    String autor;
-    double precio;
-    int cantidad;
+    private String tituloLibro;
+    private int numPaginas;
+    private String editorial;
+    private String autor;
+    private double precio;
+    private int cantidad;
 
     //clientes
-    String nombreCliente;
-    String correoCliente;
+    private String nombreCliente;
+    private String correoCliente;
+
+    //comida
+    private String nombre;
+    private String sabor;
+    private String tamaño;
+    private String tipo;
+    private String categoria;
+
     
     public void mostrarMenu(){
        login();
@@ -36,7 +44,8 @@ public class menuadmin {
            System.out.println("3) Registrar cliente de la cafe-libreria");
            System.out.println("4) Consultar informacion de clientes de la cafe-libreria");
            System.out.println("5) Consultar libros existentes");
-           System.out.println("6) Salir ");
+           System.out.println("6) Agregar Comida - Bebida");
+           System.out.println("0) Salir ");
            opcion=scanner.nextInt();
            scanner.nextLine();
            switch(opcion){
@@ -106,6 +115,7 @@ public class menuadmin {
                     libros.get(idLibro).mostrarLibro();
                     break;
                 case 6:
+
                     break;
                 default:
                     System.out.println("Escoja una opcion valida");
@@ -188,5 +198,39 @@ public class menuadmin {
         }else{
             System.out.println(libros.get(idLibro).getTituloLibro()+ " YA NO HAY EN STOCK");
         }
+    }
+    
+    public void agregarComida(){
+        System.out.println("1) Agregar comida");
+        System.out.println("2) Agregar bebida");
+        System.out.println("3) Agregar comida");
+
+        opcion = scanner.nextInt();
+        scanner.nextLine();
+        switch (opcion) {
+            case 1:
+                System.out.println("Nombre de la comida: " );
+                nombre = scanner.nextLine();
+                scanner.nextLine();
+                System.out.println("Tamaño de la comida: " );
+                tamaño = scanner.nextLine();
+                scanner.nextLine();
+                System.out.println("Precio de la comida: " );
+                precio = scanner.nextDouble();
+                scanner.nextLine();
+                System.out.println("Categoría de la comida: " );
+                categoria = scanner.nextLine();
+                scanner.nextLine();
+                System.out.println("Cantidad en stock: " );
+                cantidad = scanner.nextInt();
+                scanner.nextLine();
+                
+                break;
+        
+            default:
+                break;
+        }
+
+        
     }
 }

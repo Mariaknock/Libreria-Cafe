@@ -4,7 +4,7 @@ public class Bebida{
     private String nombre;
     private String sabor;
     private String tamaño;
-    private int precio;
+    private double precio;
     private String tipo;
     private int cantidad;
 
@@ -42,7 +42,7 @@ public class Bebida{
         this.tamaño=tamaño;
     }
 
-    public int getPrecio(){
+    public double getPrecio(){
         return precio;
     }
 
