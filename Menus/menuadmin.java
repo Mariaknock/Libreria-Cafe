@@ -5,8 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 //hola Manugod
-//hola amigos
-
+//hola mundo
 
 public class menuadmin {
     Scanner scanner = new Scanner(System.in);
