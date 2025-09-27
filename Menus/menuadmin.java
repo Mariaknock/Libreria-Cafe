@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 //hola Manugod
 
-
 public class menuadmin {
     Scanner scanner = new Scanner(System.in);
     Inventario inventario=new Inventario();
