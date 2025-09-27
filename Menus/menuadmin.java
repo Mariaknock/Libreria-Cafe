@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+
+//hola mundo 
+
 public class menuadmin {
     Scanner scanner = new Scanner(System.in);
     Inventario inventario=new Inventario();
