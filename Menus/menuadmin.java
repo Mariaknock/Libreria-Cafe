@@ -3,7 +3,7 @@ import Articulos.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-//mariano
+
 
 public class menuadmin {
     Scanner scanner = new Scanner(System.in);
