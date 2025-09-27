@@ -8,7 +8,7 @@ public class Bebida{
     private String tipo;
     private int cantidad;
 
-    public Bebida(String nombre,String sabor, String tamaño, int precio, String tipo, int cantidad){
+    public Bebida(String nombre,String sabor, String tamaño, double precio, String tipo, int cantidad){
 
         this.nombre=nombre;
         this.sabor=sabor;
