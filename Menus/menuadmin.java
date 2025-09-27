@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-//hola
+//hola Manugod
+
 
 public class menuadmin {
     Scanner scanner = new Scanner(System.in);
