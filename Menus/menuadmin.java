@@ -45,7 +45,7 @@ public class menuadmin {
            System.out.println("4) Consultar informacion de clientes de la cafe-libreria");
            System.out.println("5) Consultar libros existentes");
            System.out.println("6) Agregar Comida - Bebida");
-           System.out.println("0) Salir ");
+           System.out.println("7) Salir ");
            opcion=scanner.nextInt();
            scanner.nextLine();
            switch(opcion){
@@ -121,7 +121,7 @@ public class menuadmin {
                     System.out.println("Escoja una opcion valida");
            }
 
-       }while(opcion!=6);
+       }while(opcion!=7);
     }
 
     public void login(){
