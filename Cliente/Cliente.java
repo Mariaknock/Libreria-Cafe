@@ -3,11 +3,14 @@ public class Cliente{
 
     private String nombre;
     private String correo;
+    private int id;
+    private static int contador=1;
     
 
     public Cliente(String nombre, String correo) {
         this.nombre = nombre;
         this.correo = correo;
+        this.id=contador++;
     }
 
     public String getNombre() {
@@ -26,7 +29,10 @@ public class Cliente{
         this.correo = correo;
     }
 
-    // Opcional pero recomendado: Método toString() para una mejor representación
+    public int getId() {
+      return this.id;
+    }
+
     public String toString() {
         return "Cliente{" +
                "nombre='" + nombre + '\'' +
