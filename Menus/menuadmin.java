@@ -21,6 +21,10 @@ public class menuadmin {
     String autor;
     double precio;
     int cantidad;
+
+    //clientes
+    String nombreCliente;
+    String correoCliente;
     
     public void mostrarMenu(){
        login();
@@ -71,8 +75,25 @@ public class menuadmin {
                     }
                     break;
                 case 3:
+                    System.out.println("Ingrese el nombre del cliente: ");
+                    nombreCliente = scanner.nextLine();
+                    System.out.println("Ingrese el correo del cliente: ");
+                    correoCliente = scanner.nextLine();
+
+                    Cliente nuevoCliente = new Cliente(nombreCliente, correoCliente);
+                    clientes.add(nuevoCliente);
+                    System.out.println("Cliente registrado");
                     break;
                 case 4:
+                    if(clientes.isEmpty()){
+                        System.out.println("No hay clientes existentes");
+                    }else{
+                    System.out.printf("%-5s %-25s %-30s %-15s\n", "ID", "NOMBRE", "CORREO", "CUENTA TOTAL");
+                    for (int i = 0; i < clientes.size(); i++) {
+                        Cliente c = clientes.get(i);
+                        System.out.printf("%-5d %-25s %-30s $%-15.2f\n", i, c.getNombre(), c.getCorreo(), c.cuentaTotal);
+                    }
+                }
                     break;
                 case 5:
                     System.out.printf("%-35s %-10s %-15s\n", "TÍTULO DEL LIBRO", "ID LIBRO","STOCK");
