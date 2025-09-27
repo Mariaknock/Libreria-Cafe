@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 //hola mundo 
 
-public class MenuAdmin {
+public class menuadmin {
     Scanner scanner = new Scanner(System.in);
     Inventario inventario=new Inventario();
     Map<Integer, Libro> libros = inventario.getLibros();
