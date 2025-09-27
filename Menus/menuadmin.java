@@ -204,7 +204,6 @@ public class menuadmin {
         System.out.println("1) Agregar comida");
         System.out.println("2) Agregar bebida");
         System.out.println("3) Salir");
-
         opcion = scanner.nextInt();
         scanner.nextLine();
         switch (opcion) {
@@ -255,7 +254,5 @@ public class menuadmin {
                 System.out.println("Opción inválida");
                 break;
         }
-
-        
     }
 }
