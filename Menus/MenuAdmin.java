@@ -4,7 +4,7 @@ import Articulos.*;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
-public class menuadmin {
+public class MenuAdmin {
     private Scanner scanner = new Scanner(System.in);
     private Inventario inventario=new Inventario();
     private ArrayList<Cliente> clientes=new ArrayList<>();
