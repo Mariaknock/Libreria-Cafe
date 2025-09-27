@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class menuadmin {
     Scanner scanner = new Scanner(System.in);
     Inventario inventario=new Inventario();
+    ArrayList<Cliente> clientes=new ArrayList<>();
     Map<Integer, Libro> libros = inventario.getLibros();
     int claveAcceso=1234;
     int numero;
