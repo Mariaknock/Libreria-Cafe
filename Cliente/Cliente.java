@@ -1,3 +1,4 @@
+package Cliente;
 public class Cliente{
 
     private String nombre;
@@ -24,9 +25,6 @@ public class Cliente{
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-
-
-
 
     public void comprarComida(double costoComida) {
         if (costoComida > 0) {

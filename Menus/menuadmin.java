@@ -1,4 +1,5 @@
 package Menus;
+import Cliente;
 import Articulos.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,6 +11,7 @@ public class menuadmin {
     Inventario inventario=new Inventario();
     ArrayList<Cliente> clientes=new ArrayList<>();
     Map<Integer, Libro> libros = inventario.getLibros();
+
     int claveAcceso=1234;
     int numero;
     int opcion;
