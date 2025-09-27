@@ -1,7 +1,6 @@
 package Menus;
 import Cliente.*;
 import Articulos.*;
-import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
@@ -117,6 +116,9 @@ public class menuadmin {
                 case 6:
                     agregarComida();
                     break;
+                case 7:
+                    System.out.println("Hasta luego :D");
+                    break;
                 default:
                     System.out.println("Escoja una opcion valida");
            }
@@ -211,16 +213,13 @@ public class menuadmin {
             case 1:
                 System.out.println("Nombre de la comida: " );
                 nombre = scanner.nextLine();
-                scanner.nextLine();
                 System.out.println("Tamaño de la comida: " );
                 tamaño = scanner.nextLine();
-                scanner.nextLine();
                 System.out.println("Precio de la comida: " );
                 precio = scanner.nextDouble();
                 scanner.nextLine();
                 System.out.println("Categoría de la comida: " );
                 categoria = scanner.nextLine();
-                scanner.nextLine();
                 System.out.println("Cantidad en stock: " );
                 cantidad = scanner.nextInt();
                 scanner.nextLine();
@@ -230,19 +229,15 @@ public class menuadmin {
             case 2:
                 System.out.println("Nombre de la bebida: " );
                 nombre = scanner.nextLine();
-                scanner.nextLine();
                 System.out.println("Sabor de la bebida: " );
                 sabor = scanner.nextLine();
-                scanner.nextLine();
                 System.out.println("Tamaño de la bebida: " );
                 tamaño = scanner.nextLine();
-                scanner.nextLine();
                 System.out.println("Precio de la bebida: " );
                 precio = scanner.nextDouble();
                 scanner.nextLine();
                 System.out.println("Categoría de la bebida: " );
                 categoria = scanner.nextLine();
-                scanner.nextLine();
                 System.out.println("Cantidad en stock: " );
                 cantidad = scanner.nextInt();
                 scanner.nextLine();
