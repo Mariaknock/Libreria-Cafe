@@ -5,6 +5,14 @@ import java.util.Map;
 import java.util.Scanner;
 
 
+<<<<<<< HEAD
+=======
+//hola yo soy yo
+
+// arriba el Barcelona
+
+
+>>>>>>> 78dcee28f9da7206400fcd7399ea410432ea064a
 
 public class menuadmin {
     Scanner scanner = new Scanner(System.in);
