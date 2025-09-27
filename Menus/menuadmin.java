@@ -115,7 +115,7 @@ public class menuadmin {
                     libros.get(idLibro).mostrarLibro();
                     break;
                 case 6:
-
+                    agregarComida();
                     break;
                 default:
                     System.out.println("Escoja una opcion valida");
@@ -203,7 +203,7 @@ public class menuadmin {
     public void agregarComida(){
         System.out.println("1) Agregar comida");
         System.out.println("2) Agregar bebida");
-        System.out.println("3) Agregar comida");
+        System.out.println("3) Salir");
 
         opcion = scanner.nextInt();
         scanner.nextLine();
@@ -224,10 +224,35 @@ public class menuadmin {
                 System.out.println("Cantidad en stock: " );
                 cantidad = scanner.nextInt();
                 scanner.nextLine();
-                
+                Comida nuevaComida = new Comida(nombre, tamaño, precio, categoria, cantidad);
+                inventario.agregarComida(nuevaComida);
                 break;
-        
+            case 2:
+                System.out.println("Nombre de la bebida: " );
+                nombre = scanner.nextLine();
+                scanner.nextLine();
+                System.out.println("Sabor de la bebida: " );
+                sabor = scanner.nextLine();
+                scanner.nextLine();
+                System.out.println("Tamaño de la bebida: " );
+                tamaño = scanner.nextLine();
+                scanner.nextLine();
+                System.out.println("Precio de la bebida: " );
+                precio = scanner.nextDouble();
+                scanner.nextLine();
+                System.out.println("Categoría de la bebida: " );
+                categoria = scanner.nextLine();
+                scanner.nextLine();
+                System.out.println("Cantidad en stock: " );
+                cantidad = scanner.nextInt();
+                scanner.nextLine();
+                Bebida nuevBebida = new Bebida(nombre, sabor, tamaño, precio, tipo, cantidad);
+                inventario.agregarBebida(nuevBebida);
+                break;
+            case 3:
+                break;
             default:
+                System.out.println("Opción inválida");
                 break;
         }
 
