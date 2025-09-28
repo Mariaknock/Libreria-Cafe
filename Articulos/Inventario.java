@@ -8,8 +8,8 @@ import java.util.HashSet;
 public class Inventario{
 
 	private Map<Integer, Libro> libros=new HashMap<>();
-	private Set<Comida> comidas=new HashSet<>();
-	private Set<Bebida> bebidas=new HashSet<>();
+	private Map<Integer, Comida> comidas=new HashMap<>();
+	private Map<Integer, Bebida> bebidas=new HashMap<>();
 
 	public Inventario()
     {
@@ -47,16 +47,16 @@ public class Inventario{
         Comida c9 = new Comida("Ensalada de frutas", "mediano", 55, "Ensalada", 12);
         Comida c10 = new Comida("Sandwich de Huevo", "grande", 55, "Sandwich", 15);
 
-        this.comidas.add(c1);
-        this.comidas.add(c2);
-        this.comidas.add(c3);
-        this.comidas.add(c4);
-        this.comidas.add(c5);
-        this.comidas.add(c6);
-        this.comidas.add(c7);
-        this.comidas.add(c8);
-        this.comidas.add(c9);
-        this.comidas.add(c10);
+        this.comidas.put(c1.getId(), c1);
+        this.comidas.put(c2.getId(), c2);  
+        this.comidas.put(c3.getId(), c3);
+        this.comidas.put(c4.getId(), c4);
+        this.comidas.put(c5.getId(), c5);
+        this.comidas.put(c6.getId(), c6);
+        this.comidas.put(c7.getId(), c7);
+        this.comidas.put(c8.getId(), c8);
+        this.comidas.put(c9.getId(), c9);
+        this.comidas.put(c10.getId(), c10);
 
         Bebida b1 = new Bebida("Café Americano", "Expresso", "mediano", 35, "Caliente", 50);
         Bebida b2 = new Bebida("Té Helado", "Limón", "grande", 40, "Frío", 40);
@@ -69,16 +69,16 @@ public class Inventario{
         Bebida b9 = new Bebida("Mokachino", "Moka", "mediano", 35, "Caliente", 20);
         Bebida b10 = new Bebida("Jugo de Manzana", "Manzana", "chico", 45, "Frío", 25);
 
-        this.bebidas.add(b1);
-        this.bebidas.add(b2);
-        this.bebidas.add(b3);
-        this.bebidas.add(b4);
-        this.bebidas.add(b5);
-        this.bebidas.add(b6);
-        this.bebidas.add(b7);
-        this.bebidas.add(b8);
-        this.bebidas.add(b9);
-        this.bebidas.add(b10);
+        this.bebidas.put(b1.getId(), b1);
+        this.bebidas.put(b2.getId(), b2);
+        this.bebidas.put(b3.getId(), b3);
+        this.bebidas.put(b4.getId(), b4);
+        this.bebidas.put(b5.getId(), b5);
+        this.bebidas.put(b6.getId(), b6);
+        this.bebidas.put(b7.getId(), b7);
+        this.bebidas.put(b8.getId(), b8);
+        this.bebidas.put(b9.getId(), b9);
+        this.bebidas.put(b10.getId(), b10);
     }
 
     //termina contructor
@@ -89,33 +89,33 @@ public class Inventario{
         return this.libros;
     }
 
-    public Set<Comida> getComidas() {
+    public Map<Integer, Comida> getComidas() {
         return this.comidas;
     }
     
-    public Set<Bebida> getBebidas() {
+    public Map<Integer, Bebida> getBebidas() {
         return this.bebidas;
     }
     
     //////
     public void agregarComida(Comida comida){
-        this.comidas.add(comida);
+        this.comidas.put(comida.getId(),comida);
     }
     public void agregarLibro(Libro libro){
         this.libros.put(libro.getId(), libro);
     }
     public void agregarBebida(Bebida bebida){
-        this.bebidas.add(bebida);
+        this.bebidas.put(bebida.getId(),bebida);
     }
 
-    public void eliminarComida(String nombre){
-        this.comidas.removeIf(comida -> comida.getNombre().equals(nombre));
+    public void eliminarComida(int id){
+        this.comidas.remove(id);
     }
     public void eliminarLibro(int id){
         this.libros.remove(id);
     }
-    public void eliminarBebida(String nombre){
-        this.bebidas.removeIf(bebida -> bebida.getNombre().equals(nombre));
+    public void eliminarBebida(int id){
+        this.bebidas.remove(id);
     }
     
     public void mostrarLibros()
