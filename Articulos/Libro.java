@@ -10,8 +10,6 @@ public class Libro
 	private int id;
 	private static int contador=1;
 	private static double precioRenta=50;
-
-
 	//constructor 
 	public Libro(String tituloLibro,int numPaginas,String editorial,String autor,double precio, int cantidad)
 	{

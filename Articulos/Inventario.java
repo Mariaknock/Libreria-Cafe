@@ -117,7 +117,6 @@ public class Inventario{
         System.out.printf("%-35s %-10s %-10s\n", "COMIDA", "ID DE LA COMIDA","PRECIO");
         for (int i=1; i<=libros.size(); i++)
             System.out.printf("%-35s %-10d %-10f\n",comidas.get(i).getNombre(), comidas.get(i).getId(), comidas.get(i).getPrecio());
-
     }
 
      public void mostrarBebidas()
