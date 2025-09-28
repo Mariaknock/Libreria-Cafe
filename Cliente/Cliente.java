@@ -34,10 +34,9 @@ public class Cliente{
     }
 
     public String toString() {
-        return "Cliente{" +
-               "nombre='" + nombre + '\'' +
+        return "nombre='" + nombre + '\'' +
                ", correo='" + correo + '\'' +
-               '}';
+               '\n';
     }
 
 }

@@ -9,7 +9,7 @@ public class MenuUsuario{
     private int opcion, id;
     private double propina;
     private Inventario inventario;
-    private String decision;
+    private String decision, nombre, correo;
 
     public MenuUsuario(Inventario inventario){
         this.inventario = inventario;
@@ -17,8 +17,14 @@ public class MenuUsuario{
     public void mostrarMenuUsuario(){
         ArrayList<Double> precios = new ArrayList<>();
         ArrayList<String> nombres = new ArrayList<>();
-        do {
-            System.out.println("--- BIENVENIDO AL SERVICIO DE CAFÉ-LIBRERÍA ---");
+        System.out.println("--- BIENVENIDO AL SERVICIO DE CAFÉ-LIBRERÍA ---");
+        System.out.println("¿Cuál es tu nombre? ");
+        nombre = scanner.nextLine();
+        System.out.println("¿Cuál es tu correo? ");
+        correo = scanner.nextLine();
+        Cliente cliente = new Cliente(nombre, correo);
+
+        do {    
             System.out.println("\nSeleccione una opción:");
             System.out.println("1. Rentar Libro");
             System.out.println("2. Comprar Libro");
@@ -83,16 +89,17 @@ public class MenuUsuario{
                     } while (opcionCom!=3);
                     break;
                 case 4:
-                    System.out.println("¿Seguro que quiere su orden? El programa terminará (s/n)");
+                    System.out.println("¿Seguro que quiere su orden? El programa saldrá del menú de usuario (s/n)");
                     decision = scanner.nextLine();
                     switch (decision) {
                         case "s":
-                            System.out.println("¿Qué porcentaje de propina agregará?");
+                            System.out.println("¿Qué valor de propina agregará?");
                             propina = scanner.nextDouble();
                             scanner.nextLine();
-                            
+                            Cuenta cuenta = new Cuenta(cliente, propina, precios);
+                            cuenta.recibo(precios, nombres);
+                            opcion = 5;
                             break;
-                    
                         default:
                             break;
                     }
