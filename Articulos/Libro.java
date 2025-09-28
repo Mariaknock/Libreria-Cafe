@@ -89,8 +89,8 @@ public class Libro
         return false;
     }
 	public void mostrarLibro() {
-		System.out.println("Título: " + getTituloLibro());
-		System.out.println("Número de páginas: " + getNumPaginas());
+		System.out.println("Titulo: " + getTituloLibro());
+		System.out.println("Numero de páginas: " + getNumPaginas());
 		System.out.println("Editorial: " + getEditorial());
 		System.out.println("Autor: " + getAutor());
 		System.out.println("Precio: " + getPrecio());
