@@ -124,6 +124,7 @@ public class MenuUsuario{
                     }
                     break;
                 case 5:
+                    System.out.println("Saliendo...");
                     break;
                 default:
                     System.out.println("Opción invalida");
