@@ -1,9 +1,10 @@
 package Menus;
 import java.util.Scanner;
+
 public class MenuUsuario{
     private Scanner scanner =new Scanner(System.in);
     private int opcion;
-
+    
     do {
         System.out.println("--- BIENVENIDO AL SERVICIO DE CAFÉ-LIBRERÍA ---");
         System.out.println("\nSeleccione una opción:");
