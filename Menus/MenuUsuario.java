@@ -75,6 +75,32 @@ public class MenuUsuario{
                                 System.out.println("ID de bebida no valido");
                             }
                             break;
+                            case 2:
+                            System.out.println("--- BEBIDAS EN EXISTENCIA ---");
+                            for(Comida comida: inventario.getComidas().values()){
+                                System.out.println("ID: "+comida.getId());
+                                System.out.println("Nombre: "+comida.getNombre());
+                                System.out.println("Tamaño: "+comida.getTamaño());
+                                System.out.println("Precio: "+comida.getPrecio());
+                            }
+                            System.out.println("Ingrese el ID de la comida que quieres: ");
+                            int idComida= scanner.nextInt();
+                            scanner.nextLine();
+                            if (inventario.getComidas().containsKey(idComida)) {
+                                Comida comida = inventario.getComidas().get(idComida);
+                                nombres.add(comida.getNombre());
+                                precios.add(comida.getPrecio());
+                                System.out.println("Comida agregada al pedido");
+                            }else{
+                                System.out.println("ID de comida no valido");
+                            }
+                            break;
+                            case 3:
+                            System.out.println("Regresando al menu anterior...");
+                            break;
+                            default:
+                            System.out.println("Opcion no valida");
+
                         }
                         
                     } while (opcionCom!=3);
