@@ -74,7 +74,6 @@ public class Libro
 	{
 		this.cantidad=cantidad;
 	}
-
 	public int getId(){
 		return id;
 	}
@@ -90,6 +89,7 @@ public class Libro
         }
         return false;
     }
+
 	public void mostrarLibro() {
 		System.out.println("Título: " + this.tituloLibro);
 		System.out.println("Número de páginas: " + this.numPaginas);
