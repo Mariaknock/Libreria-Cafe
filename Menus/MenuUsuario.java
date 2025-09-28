@@ -35,7 +35,9 @@ public class MenuUsuario{
                     System.out.println("Elige el ID del libro a comprar: ");
                     id = scanner.nextInt();
                     scanner.nextLine();
-                    nombres.add("");
+                    nombres.add(inventario.getLibros().get(id).getTituloLibro());
+                    precios.add(inventario.getLibros().get(id).getPrecio());
+                    inventario.getLibros().get(id).decrementarStock();
                     break;
                 case 3:
                     break;
