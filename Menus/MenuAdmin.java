@@ -144,7 +144,7 @@ public class MenuAdmin {
         scanner.nextLine();
         do {
             System.out.println("---Modificaciones---");
-            System.out.println("1. Número de páginas");
+            System.out.println("1. Numero de páginas");
             System.out.println("2. Editorial");
             System.out.println("3. Precio");
             System.out.println("4. Cantidad (Stock)");
@@ -180,7 +180,7 @@ public class MenuAdmin {
                     System.out.println("Saliendo del gestor de modificaciones");
                     break;
                 default:
-                    System.out.println("Opción no reconocida.");
+                    System.out.println("Opcion no reconocida.");
             }
         } while (opcion != 5);
     }
@@ -213,7 +213,7 @@ public class MenuAdmin {
                 System.out.println("Precio de la comida: " );
                 precio = scanner.nextDouble();
                 scanner.nextLine();
-                System.out.println("Categoría de la comida: " );
+                System.out.println("Categoria de la comida: " );
                 categoria = scanner.nextLine();
                 System.out.println("Cantidad en stock: " );
                 cantidad = scanner.nextInt();
@@ -231,7 +231,7 @@ public class MenuAdmin {
                 System.out.println("Precio de la bebida: " );
                 precio = scanner.nextDouble();
                 scanner.nextLine();
-                System.out.println("Categoría de la bebida: " );
+                System.out.println("Categoria de la bebida: " );
                 categoria = scanner.nextLine();
                 System.out.println("Cantidad en stock: " );
                 cantidad = scanner.nextInt();
@@ -242,7 +242,7 @@ public class MenuAdmin {
             case 3:
                 break;
             default:
-                System.out.println("Opción inválida");
+                System.out.println("Opcion inválida");
                 break;
         }
     }
