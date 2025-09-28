@@ -1,10 +1,8 @@
 package Articulos;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.HashSet;
-
 public class Inventario{
 
 	private Map<Integer, Libro> libros=new HashMap<>();

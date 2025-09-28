@@ -7,7 +7,8 @@ public class Bebida{
     private double precio;
     private String tipo;
     private int cantidad;
-
+    private int id;
+    private static int contador=1;
     public Bebida(String nombre,String sabor, String tamaño, double precio, String tipo, int cantidad){
 
         this.nombre=nombre;
@@ -16,6 +17,7 @@ public class Bebida{
         this.precio=precio;
         this.tipo=tipo;
         this.cantidad=cantidad;
+        this.id=contador++;
     }
 
     public String getNombre(){
@@ -66,6 +68,11 @@ public class Bebida{
         this.cantidad=cantidad;
     }
 
+    public int getId()
+    {
+        return id;
+    }
+
 
     public void mostrarBebida(){
         System.out.println("Nombre: "+getNombre());
@@ -73,6 +80,7 @@ public class Bebida{
         System.out.println("Precio "+getPrecio());
         System.out.println("Tipo: "+getTipo());
         System.out.println("Precio "+getCantidad());
+        System.out.println("ID: "+ getId());
     }
     
 

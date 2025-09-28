@@ -6,6 +6,8 @@ public class Comida {
     private double precio;
     private String categoria;
     private int cantidad;
+    private int id;
+    private static int contador=1;
     public Comida(String nombre, String tamaño, double precio, String categoria, int cantidad){
 
         this.nombre=nombre;
@@ -13,6 +15,7 @@ public class Comida {
         this.precio=precio;
         this.categoria=categoria;
         this.cantidad=cantidad;
+        this.id=contador++;
     }
 
     public String getNombre(){
@@ -55,6 +58,10 @@ public class Comida {
         this.cantidad=cantidad;
     }
 
+    public int getId()
+    {
+        return id;
+    }
 
     public void mostrarComida(){
         System.out.println("Nombre: "+getNombre());
@@ -62,7 +69,6 @@ public class Comida {
         System.out.println("Precio "+getPrecio());
         System.out.println("Categoria: "+getCategoria());
         System.out.println("Precio "+getCantidad());
+        System.out.println("ID: "+ getId());
     }
-    
-    
 }
