@@ -17,10 +17,10 @@ public class MenuUsuario{
     public void mostrarMenuUsuario(){
         ArrayList<Double> precios = new ArrayList<>();
         ArrayList<String> nombres = new ArrayList<>();
-        System.out.println("--- BIENVENIDO AL SERVICIO DE CAFÉ-LIBRERÍA ---");
+        System.out.println("--- BIENVENIDO AL SERVICIO DE CAFE-LIBRERIA ---");
         System.out.println("¿Cuál es tu nombre? ");
         nombre = scanner.nextLine();
-        System.out.println("¿Cuál es tu correo? ");
+        System.out.println("¿Cual es tu correo? ");
         correo = scanner.nextLine();
         Cliente cliente = new Cliente(nombre, correo);
 
@@ -28,10 +28,10 @@ public class MenuUsuario{
             System.out.println("\nSeleccione una opción:");
             System.out.println("1. Rentar Libro");
             System.out.println("2. Comprar Libro");
-            System.out.println("3. Pedir Café/Comida");
+            System.out.println("3. Pedir Cafe/Comida");
             System.out.println("4. Pedir la Cuenta");
             System.out.println("5. Salir");
-            System.out.print("Opción: ");
+            System.out.print("Opcion: ");
             opcion = scanner.nextInt();
             scanner.nextLine();
             switch (opcion) {
@@ -110,7 +110,7 @@ public class MenuUsuario{
                     decision = scanner.nextLine();
                     switch (decision) {
                         case "s":
-                            System.out.println("¿Qué valor de propina agregará?");
+                            System.out.println("¿Que valor de propina agregará?");
                             propina = scanner.nextDouble();
                             scanner.nextLine();
                             Cuenta cuenta = new Cuenta(cliente, propina, precios);
@@ -125,7 +125,7 @@ public class MenuUsuario{
                     System.out.println("Saliendo...");
                     break;
                 default:
-                    System.out.println("Opción invalida");
+                    System.out.println("Opcion invalida");
             }
         } while (opcion != 5);
     }
