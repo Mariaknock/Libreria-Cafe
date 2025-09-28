@@ -10,8 +10,6 @@ public class Libro
 	private int id;
 	private static int contador=1;
 	private static double precioRenta=50;
-
-
 	//constructor 
 	public Libro(String tituloLibro,int numPaginas,String editorial,String autor,double precio, int cantidad)
 	{
@@ -81,6 +79,7 @@ public class Libro
 	{
 		return precioRenta;
 	}
+
 	//metodo para eliminar en stock
 	public boolean decrementarStock() {
         if (this.cantidad > 0) {
@@ -89,15 +88,14 @@ public class Libro
         }
         return false;
     }
-
 	public void mostrarLibro() {
-		System.out.println("Título: " + this.tituloLibro);
-		System.out.println("Número de páginas: " + this.numPaginas);
-		System.out.println("Editorial: " + this.editorial);
-		System.out.println("Autor: " + this.autor);
-		System.out.println("Precio: " + this.precio);
-		System.out.println("ID: " + this.id);
-		System.out.println("Stock " + this.cantidad);
-		System.out.println("Precio renta "+ precioRenta);
+		System.out.println("Título: " + getTituloLibro());
+		System.out.println("Número de páginas: " + getNumPaginas());
+		System.out.println("Editorial: " + getEditorial());
+		System.out.println("Autor: " + getAutor());
+		System.out.println("Precio: " + getPrecio());
+		System.out.println("ID: " + getId());
+		System.out.println("Stock " + getCantidad());
+		System.out.println("Precio renta "+ getPrecioRenta());
 	}
 }
