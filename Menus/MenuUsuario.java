@@ -7,15 +7,24 @@ public class MenuUsuario{
     
     private Scanner scanner =new Scanner(System.in);
     private int opcion, id;
+    private double propina;
     private Inventario inventario;
+    private String decision, nombre, correo;
+
     public MenuUsuario(Inventario inventario){
         this.inventario = inventario;
     }
     public void mostrarMenuUsuario(){
         ArrayList<Double> precios = new ArrayList<>();
         ArrayList<String> nombres = new ArrayList<>();
-        do {
-            System.out.println("--- BIENVENIDO AL SERVICIO DE CAFÉ-LIBRERÍA ---");
+        System.out.println("--- BIENVENIDO AL SERVICIO DE CAFÉ-LIBRERÍA ---");
+        System.out.println("¿Cuál es tu nombre? ");
+        nombre = scanner.nextLine();
+        System.out.println("¿Cuál es tu correo? ");
+        correo = scanner.nextLine();
+        Cliente cliente = new Cliente(nombre, correo);
+
+        do {    
             System.out.println("\nSeleccione una opción:");
             System.out.println("1. Rentar Libro");
             System.out.println("2. Comprar Libro");
@@ -70,17 +79,60 @@ public class MenuUsuario{
                                 Bebida bebida = inventario.getBebidas().get(idBebida);
                                 nombres.add(bebida.getNombre());
                                 precios.add(bebida.getPrecio());
+                                inventario.getBebidas().get(id).decrementarStock();
                                 System.out.println("Bebida agregada al pedido");
                             }else{
                                 System.out.println("ID de bebida no valido");
                             }
                             break;
+                            case 2:
+                            System.out.println("--- BEBIDAS EN EXISTENCIA ---");
+                            for(Comida comida: inventario.getComidas().values()){
+                                System.out.println("ID: "+comida.getId());
+                                System.out.println("Nombre: "+comida.getNombre());
+                                System.out.println("Tamaño: "+comida.getTamaño());
+                                System.out.println("Precio: "+comida.getPrecio());
+                            }
+                            System.out.println("Ingrese el ID de la comida que quieres: ");
+                            int idComida= scanner.nextInt();
+                            scanner.nextLine();
+                            if (inventario.getComidas().containsKey(idComida)) {
+                                Comida comida = inventario.getComidas().get(idComida);
+                                nombres.add(comida.getNombre());
+                                precios.add(comida.getPrecio());
+                                inventario.getComidas().get(id).decrementarStock();
+                                System.out.println("Comida agregada al pedido");
+                            }else{
+                                System.out.println("ID de comida no valido");
+                            }
+                            break;
+                            case 3:
+                            System.out.println("Regresando al menu anterior...");
+                            break;
+                            default:
+                            System.out.println("Opcion no valida");
+
                         }
                     } while (opcionCom!=3);
                     break;
                 case 4:
+                    System.out.println("¿Seguro que quiere su orden? El programa saldrá del menú de usuario (s/n)");
+                    decision = scanner.nextLine();
+                    switch (decision) {
+                        case "s":
+                            System.out.println("¿Qué valor de propina agregará?");
+                            propina = scanner.nextDouble();
+                            scanner.nextLine();
+                            Cuenta cuenta = new Cuenta(cliente, propina, precios);
+                            cuenta.recibo(precios, nombres);
+                            opcion = 5;
+                            break;
+                        default:
+                            break;
+                    }
                     break;
                 case 5:
+                    System.out.println("Saliendo...");
                     break;
                 default:
                     System.out.println("Opción invalida");

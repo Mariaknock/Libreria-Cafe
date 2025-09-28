@@ -1,4 +1,16 @@
 import Articulos.Inventario;
+/*<<<<<<< HEAD
+import Menus.MenuAdmin;
+import Menus.MenuUsuario;
+public class Pruebas{
+	public static void main(String[] args) {
+		Inventario inventario = new Inventario();
+		//MenuAdmin menuAdmin=new MenuAdmin(inventario);
+		//menuAdmin.mostrarMenu();
+
+		MenuUsuario menuUsuario=new MenuUsuario(inventario);
+		menuUsuario.mostrarMenuUsuario();
+======= */
 import Menus.*;
 import java.util.Scanner;
 public class Pruebas{
@@ -31,5 +43,6 @@ public class Pruebas{
 					break;
 			}
 		}while(opcion!=3);
+		scanner.close();
 	}
 }

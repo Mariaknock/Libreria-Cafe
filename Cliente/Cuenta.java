@@ -47,7 +47,7 @@ public class Cuenta{
         for(Double precio:precios){
             total += precio;
         }
-        montoTotal = total + (total/propina);
+        montoTotal = total + propina;
     }
     public void recibo(ArrayList<Double> precios, ArrayList<String> nombres){
         System.out.println("----- RECIBO -----");
@@ -62,7 +62,7 @@ public class Cuenta{
             subtotal += precio;
         }
         System.out.println("Subtotal: $" + subtotal);
-        System.out.println("Propina: $" + (subtotal / propina));
+        System.out.println("Propina: $" + propina);
         System.out.println("Total: $" + montoTotal);
         System.out.println("------------------");
     }
