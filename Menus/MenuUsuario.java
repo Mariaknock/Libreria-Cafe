@@ -1,9 +1,7 @@
 package Menus;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import Articulos.Libro;
-
+import Articulos.*;
 public class MenuUsuario{
     
     private Scanner scanner =new Scanner(System.in);
@@ -27,6 +25,7 @@ public class MenuUsuario{
                     precios.add(Libro.getPrecioRenta());
                     break;
                 case 2:
+
                     break;
                 case 3:
                     break;
