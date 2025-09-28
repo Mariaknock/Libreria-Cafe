@@ -7,7 +7,6 @@ public class MenuUsuario{
     private Scanner scanner =new Scanner(System.in);
     private int opcion, id;
     private Inventario inventario;
-
     public MenuUsuario(Inventario inventario){
         this.inventario = inventario;
     }

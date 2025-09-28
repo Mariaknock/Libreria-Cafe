@@ -26,7 +26,7 @@ public class MenuAdmin {
     private String nombreCliente;
     private String correoCliente;
 
-    //comida
+    //comida y bebida
     private String nombre;
     private String sabor;
     private String tamaño;
@@ -91,7 +91,6 @@ public class MenuAdmin {
                     nombreCliente = scanner.nextLine();
                     System.out.println("Ingrese el correo del cliente: ");
                     correoCliente = scanner.nextLine();
-
                     Cliente nuevoCliente = new Cliente(nombreCliente, correoCliente);
                     clientes.add(nuevoCliente);
                     System.out.println("Cliente registrado");
