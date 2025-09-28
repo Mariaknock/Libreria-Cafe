@@ -32,8 +32,6 @@ public class MenuAdmin {
     private String tamaño;
     private String tipo;
     private String categoria;
-
-    
     public void mostrarMenu(){
        login();
        do{
@@ -105,9 +103,7 @@ public class MenuAdmin {
                 }
                     break;
                 case 5:
-                    System.out.printf("%-35s %-10s %-15s\n", "TÍTULO DEL LIBRO", "ID LIBRO","STOCK");
-                    for (int i=1; i<=inventario.getLibros().size(); i++)
-                        System.out.printf("%-35s %-10d %-15d\n",libros.get(i).getTituloLibro(),libros.get(i).getId(),libros.get(i).getCantidad());
+                    inventario.mostrarLibros();
                     System.out.println("Ingrese el ID del libro para mostrar sus especificaciones");
                     idLibro=scanner.nextInt();
                     scanner.nextLine();
@@ -138,9 +134,7 @@ public class MenuAdmin {
 
     public void modificarLibro(Map<Integer, Libro> libros)
     {
-        System.out.printf("%-35s %-10s\n", "TÍTULO DEL LIBRO", "ID DEL LIBRO");
-        for (int i=1; i<=inventario.getLibros().size(); i++)
-            System.out.printf("%-35s %-10d\n",libros.get(i).getTituloLibro(),libros.get(i).getId());
+        inventario.mostrarLibros();
         System.out.println("!Escoge el ID del libro para modificar");
         idLibro=scanner.nextInt();
         scanner.nextLine();
@@ -189,9 +183,7 @@ public class MenuAdmin {
 
     public void eliminarLibro(Map<Integer, Libro> libros)
     {
-        System.out.printf("%-35s %-10s\n", "TÍTULO DEL LIBRO", "ID DEL LIBRO");
-        for (int i=1; i<=inventario.getLibros().size(); i++)
-            System.out.printf("%-35s %-10d\n",libros.get(i).getTituloLibro(),libros.get(i).getId());
+        inventario.mostrarLibros();
         System.out.println("Escoge el ID del libro para eliminar");
         idLibro=scanner.nextInt();
         scanner.nextLine();

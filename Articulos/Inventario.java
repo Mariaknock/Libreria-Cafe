@@ -1,15 +1,11 @@
 package Articulos;
-import java.util.ArrayList;
-
 import java.util.HashMap;
 import java.util.Map;
-
 import java.util.Set;
 import java.util.HashSet;
 
 public class Inventario{
 
-	//private ArrayList<Cuenta> cuentas=new ArrayList<Cuenta>();
 	private Map<Integer, Libro> libros=new HashMap<>();
 	private Set<Comida> comidas=new HashSet<>();
 	private Set<Bebida> bebidas=new HashSet<>();
@@ -99,8 +95,6 @@ public class Inventario{
     public Set<Bebida> getBebidas() {
         return this.bebidas;
     }
-
-
     
     //////
     public void agregarComida(Comida comida){
@@ -113,12 +107,6 @@ public class Inventario{
         this.bebidas.add(bebida);
     }
 
-    /*
-    public void agregarCuenta(Cuenta cuenta){
-        cuentas.add(cuenta);
-    }
-    */
-
     public void eliminarComida(String nombre){
         this.comidas.removeIf(comida -> comida.getNombre().equals(nombre));
     }
@@ -128,11 +116,13 @@ public class Inventario{
     public void eliminarBebida(String nombre){
         this.bebidas.removeIf(bebida -> bebida.getNombre().equals(nombre));
     }
-    /*
-    public void eliminarCuenta(String id){
-        cuentas.removeIf(cuenta -> cuenta.getNumeroCuenta().equals(id));
+    
+    public void mostrarLibros()
+    {
+        System.out.printf("%-35s %-10s\n", "TÍTULO DEL LIBRO", "ID DEL LIBRO");
+        for (int i=1; i<=libros.size(); i++)
+            System.out.printf("%-35s %-10d\n",libros.get(i).getTituloLibro(),libros.get(i).getId());
     }
-    */
 }
     
 

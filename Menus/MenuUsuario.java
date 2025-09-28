@@ -27,7 +27,7 @@ public class MenuUsuario{
                     precios.add(Libro.getPrecioRenta());
                     break;
                 case 2:
-
+                    
                     break;
                 case 3:
                     break;
