@@ -8,7 +8,7 @@ public class MenuAdmin {
     private Scanner scanner = new Scanner(System.in);
     private Inventario inventario;
     private ArrayList<Cliente> clientes=new ArrayList<>();
-    private Map<Integer, Libro> libros = inventario.getLibros();
+    private Map<Integer, Libro> libros;
     private int claveAcceso=1234;
     private int numero;
     private int opcion;
@@ -35,6 +35,7 @@ public class MenuAdmin {
 
     public MenuAdmin(Inventario inventario){
         this.inventario = inventario;
+        this.libros = inventario.getLibros();
     }
     public void mostrarMenu(){
        login();
