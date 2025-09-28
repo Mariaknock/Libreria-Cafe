@@ -73,6 +73,7 @@ public class MenuUsuario{
                                 Bebida bebida = inventario.getBebidas().get(idBebida);
                                 nombres.add(bebida.getNombre());
                                 precios.add(bebida.getPrecio());
+                                inventario.getBebidas().get(id).decrementarStock();
                                 System.out.println("Bebida agregada al pedido");
                             }else{
                                 System.out.println("ID de bebida no valido");
@@ -93,6 +94,7 @@ public class MenuUsuario{
                                 Comida comida = inventario.getComidas().get(idComida);
                                 nombres.add(comida.getNombre());
                                 precios.add(comida.getPrecio());
+                                inventario.getComidas().get(id).decrementarStock();
                                 System.out.println("Comida agregada al pedido");
                             }else{
                                 System.out.println("ID de comida no valido");
