@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import Articulos.*;
 import Cliente.*;
+import java.util.HashSet;
+import java.util.Set;
 public class MenuUsuario{
     
     private Scanner scanner =new Scanner(System.in);
@@ -10,9 +12,20 @@ public class MenuUsuario{
     private double propina;
     private Inventario inventario;
     private String decision, nombre, correo;
+    private Set<String> nombres;
 
     public MenuUsuario(Inventario inventario){
         this.inventario = inventario;
+    }
+    public void librosRenta(){
+        nombres = new HashSet<>();
+        for (Libro elemento : inventario.getLibros().values()) {
+            nombres.add(elemento.getTituloLibro());
+        }
+        System.out.println("Libros para rentar: ");
+        for (String libro : nombres){
+            System.out.println(libro);
+        }
     }
     public void mostrarMenuUsuario(){
         ArrayList<Double> precios = new ArrayList<>();
