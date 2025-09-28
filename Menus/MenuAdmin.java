@@ -32,13 +32,10 @@ public class MenuAdmin {
     private String tamaño;
     private String tipo;
     private String categoria;
-<<<<<<< HEAD
 
     public MenuAdmin(Inventario inventario){
         this.inventario = inventario;
     }
-=======
->>>>>>> e17a9c170e332e200ea2c55004bb60628fbcec1b
     public void mostrarMenu(){
        login();
        do{
