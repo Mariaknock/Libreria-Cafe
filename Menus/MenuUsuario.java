@@ -49,7 +49,7 @@ public class MenuUsuario{
             scanner.nextLine();
             switch (opcion) {
                 case 1:
-                    inventario.mostrarLibros();
+                    librosRenta();
                     System.out.println("El precio de la renta del libro es el mismo para todos los libros, precio de renta: " + Libro.getPrecioRenta());
                     nombres.add("Renta de libro");
                     precios.add(Libro.getPrecioRenta());
