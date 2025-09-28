@@ -9,6 +9,7 @@ public class Bebida{
     private int cantidad;
     private int id;
     private static int contador=1;
+    
     public Bebida(String nombre,String sabor, String tamaño, double precio, String tipo, int cantidad){
 
         this.nombre=nombre;
