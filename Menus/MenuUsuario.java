@@ -5,7 +5,6 @@ public class MenuUsuario{
     
     private Scanner scanner =new Scanner(System.in);
     private int opcion;
-    
     public void mostrarMenuUsuario(){
         do {
             System.out.println("--- BIENVENIDO AL SERVICIO DE CAFÉ-LIBRERÍA ---");
@@ -34,5 +33,4 @@ public class MenuUsuario{
             }
         } while (opcion != 5);
     }
-    
 }

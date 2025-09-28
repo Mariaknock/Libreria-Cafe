@@ -9,6 +9,7 @@ public class Libro
 	private int cantidad;
 	private int id;
 	private static int contador=1;
+	private static double precioRenta=50;
 
 
 	//constructor 
@@ -77,7 +78,10 @@ public class Libro
 	public int getId(){
 		return id;
 	}
-
+	public static double getPrecioRenta()
+	{
+		return precioRenta;
+	}
 	//metodo para eliminar en stock
 	public boolean decrementarStock() {
         if (this.cantidad > 0) {
@@ -94,7 +98,7 @@ public class Libro
     System.out.println("Autor: " + this.autor);
     System.out.println("Precio: " + this.precio);
     System.out.println("ID: " + this.id);
-
-
+	System.out.println("Stock" + this.cantidad);
+	System.out.println("Precio renta"+ precioRenta);
 	}
 }
