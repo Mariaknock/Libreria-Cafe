@@ -7,7 +7,10 @@ public class MenuUsuario{
     
     private Scanner scanner =new Scanner(System.in);
     private int opcion, id;
+    private double propina;
     private Inventario inventario;
+    private String decision;
+
     public MenuUsuario(Inventario inventario){
         this.inventario = inventario;
     }
@@ -106,6 +109,19 @@ public class MenuUsuario{
                     } while (opcionCom!=3);
                     break;
                 case 4:
+                    System.out.println("¿Seguro que quiere su orden? El programa terminará (s/n)");
+                    decision = scanner.nextLine();
+                    switch (decision) {
+                        case "s":
+                            System.out.println("¿Qué porcentaje de propina agregará?");
+                            propina = scanner.nextDouble();
+                            scanner.nextLine();
+                            
+                            break;
+                    
+                        default:
+                            break;
+                    }
                     break;
                 case 5:
                     break;
