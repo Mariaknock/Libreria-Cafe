@@ -105,34 +105,23 @@ public class Inventario{
         this.bebidas.put(bebida.getId(),bebida);
     }
 
-    public void eliminarComida(int id){
-        this.comidas.remove(id);
-    }
-    public void eliminarLibro(int id){
-        this.libros.remove(id);
-    }
-    public void eliminarBebida(int id){
-        this.bebidas.remove(id);
-    }
-    
     public void mostrarLibros()
     {
-        System.out.printf("%-35s %-10s\n", "TÍTULO DEL LIBRO", "ID DEL LIBRO");
+        System.out.printf("%-35s %-10s %-10s\n", "TÍTULO DEL LIBRO", "ID","PRECIO");
         for (int i=1; i<=libros.size(); i++)
-            System.out.printf("%-35s %-10d\n",libros.get(i).getTituloLibro(),libros.get(i).getId());
+            System.out.printf("%-35s %-10d %-10f\n",libros.get(i).getTituloLibro(),libros.get(i).getId(), libros.get(i).getPrecio());
     }
 
     public void mostrarComidas()
     {
-        System.out.printf("%-35s %-10s %-10s\n", "COMIDA", "ID DE LA COMIDA","PRECIO");
+        System.out.printf("%-35s %-10s %-10s\n", "COMIDA", "ID","PRECIO");
         for (int i=1; i<=libros.size(); i++)
             System.out.printf("%-35s %-10d %-10f\n",comidas.get(i).getNombre(), comidas.get(i).getId(), comidas.get(i).getPrecio());
-
     }
 
      public void mostrarBebidas()
     {
-        System.out.printf("%-35s %-10s %-10s\n", "BEBIDA", "ID DE LA BEBIDA","PRECIO");
+        System.out.printf("%-35s %-10s %-10s\n", "BEBIDA", "ID","PRECIO");
         for (int i=1; i<=libros.size(); i++)
             System.out.printf("%-35s %-10d %-10f\n",bebidas.get(i).getNombre(), bebidas.get(i).getId(), bebidas.get(i).getPrecio());
             
