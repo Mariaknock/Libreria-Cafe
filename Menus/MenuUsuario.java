@@ -5,7 +5,12 @@ import Articulos.*;
 public class MenuUsuario{
     
     private Scanner scanner =new Scanner(System.in);
-    private int opcion;
+    private int opcion, id;
+    private Inventario inventario;
+
+    public MenuUsuario(Inventario inventario){
+        this.inventario = inventario;
+    }
     public void mostrarMenuUsuario(){
         ArrayList<Double> precios = new ArrayList<>();
         ArrayList<String> nombres = new ArrayList<>();
@@ -27,7 +32,10 @@ public class MenuUsuario{
                     precios.add(Libro.getPrecioRenta());
                     break;
                 case 2:
-
+                    System.out.println("Elige el ID del libro a comprar: ");
+                    id = scanner.nextInt();
+                    scanner.nextLine();
+                    nombres.add()
                     break;
                 case 3:
                     break;

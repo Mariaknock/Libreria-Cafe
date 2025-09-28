@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 public class MenuAdmin {
     private Scanner scanner = new Scanner(System.in);
-    private Inventario inventario=new Inventario();
+    private Inventario inventario;
     private ArrayList<Cliente> clientes=new ArrayList<>();
     private Map<Integer, Libro> libros = inventario.getLibros();
     private int claveAcceso=1234;
@@ -33,7 +33,9 @@ public class MenuAdmin {
     private String tipo;
     private String categoria;
 
-    
+    public MenuAdmin(Inventario inventario){
+        this.inventario = inventario;
+    }
     public void mostrarMenu(){
        login();
        do{
