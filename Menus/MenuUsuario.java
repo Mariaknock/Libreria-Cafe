@@ -76,7 +76,6 @@ public class MenuUsuario{
                             }
                             break;
                         }
-                        
                     } while (opcionCom!=3);
                     break;
                 case 4:
