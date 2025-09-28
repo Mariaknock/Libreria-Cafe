@@ -122,6 +122,22 @@ public class Inventario{
         for (int i=1; i<=libros.size(); i++)
             System.out.printf("%-35s %-10d\n",libros.get(i).getTituloLibro(),libros.get(i).getId());
     }
+
+    public void mostrarComidas()
+    {
+        System.out.printf("%-35s %-10s %-10s\n", "COMIDA", "ID DE LA COMIDA","PRECIO");
+        for (int i=1; i<=libros.size(); i++)
+            System.out.printf("%-35s %-10d %-10f\n",comidas.get(i).getNombre(), comidas.get(i).getId(), comidas.get(i).getPrecio());
+
+    }
+
+     public void mostrarBebidas()
+    {
+        System.out.printf("%-35s %-10s %-10s\n", "BEBIDA", "ID DE LA BEBIDA","PRECIO");
+        for (int i=1; i<=libros.size(); i++)
+            System.out.printf("%-35s %-10d %-10f\n",bebidas.get(i).getNombre(), bebidas.get(i).getId(), bebidas.get(i).getPrecio());
+            
+    }
 }
     
 

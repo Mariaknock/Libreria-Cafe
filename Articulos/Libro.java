@@ -81,6 +81,7 @@ public class Libro
 	{
 		return precioRenta;
 	}
+	
 	//metodo para eliminar en stock
 	public boolean decrementarStock() {
         if (this.cantidad > 0) {
