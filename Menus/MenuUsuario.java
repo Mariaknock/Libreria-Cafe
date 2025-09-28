@@ -101,7 +101,6 @@ public class MenuUsuario{
                             break;
                             default:
                             System.out.println("Opcion no valida");
-
                         }
                     } while (opcionCom!=3);
                     break;
