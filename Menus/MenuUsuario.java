@@ -6,7 +6,7 @@ import Cliente.*;
 public class MenuUsuario{
     
     private Scanner scanner =new Scanner(System.in);
-    private int opcion, id;
+    private int opcion;
     private double propina;
     private Inventario inventario;
     private String decision, nombre, correo;
@@ -44,12 +44,12 @@ public class MenuUsuario{
                 case 2:
                     inventario.mostrarLibros();
                     System.out.println("Elige el ID del libro a comprar: ");
-                    id = scanner.nextInt();
+                    int idLibro = scanner.nextInt();
                     scanner.nextLine();
-                    nombres.add(inventario.getLibros().get(id).getTituloLibro());
-                    precios.add(inventario.getLibros().get(id).getPrecio());
-                    inventario.getLibros().get(id).decrementarStock();
-                    System.out.println("Ha comprado el libro " + inventario.getLibros().get(id).getTituloLibro());
+                    nombres.add(inventario.getLibros().get(idLibro).getTituloLibro());
+                    precios.add(inventario.getLibros().get(idLibro).getPrecio());
+                    inventario.getLibros().get(idLibro).decrementarStock();
+                    System.out.println("Ha comprado el libro " + inventario.getLibros().get(idLibro).getTituloLibro());
                     break;
                 case 3:
 
@@ -75,8 +75,8 @@ public class MenuUsuario{
                                 Bebida bebida = inventario.getBebidas().get(idBebida);
                                 nombres.add(bebida.getNombre());
                                 precios.add(bebida.getPrecio());
-                                inventario.getBebidas().get(id).decrementarStock();
-                                System.out.println(inventario.getBebidas().get(id).getNombre()+" agregada al pedido");
+                                inventario.getBebidas().get(idBebida).decrementarStock();
+                                System.out.println(inventario.getBebidas().get(idBebida).getNombre()+" agregada al pedido");
                             }else{
                                 System.out.println("ID de bebida no valido");
                             }
@@ -91,8 +91,8 @@ public class MenuUsuario{
                                 Comida comida = inventario.getComidas().get(idComida);
                                 nombres.add(comida.getNombre());
                                 precios.add(comida.getPrecio());
-                                inventario.getComidas().get(id).decrementarStock();
-                                System.out.println(inventario.getComidas().get(id).getNombre()+" agregada al pedido");
+                                inventario.getComidas().get(idComida).decrementarStock();
+                                System.out.println(inventario.getComidas().get(idComida).getNombre()+" agregada al pedido");
                             }else{
                                 System.out.println("ID de comida no valido");
                             }
@@ -106,10 +106,10 @@ public class MenuUsuario{
                     } while (opcionCom!=3);
                     break;
                 case 4:
-                    System.out.println("¿Seguro que quiere su orden? El programa saldrá del menú de usuario (s/n)");
+                    System.out.println("¿Seguro que quiere su orden? El programa saldrá del menú de usuario (si/no)");
                     decision = scanner.nextLine();
                     switch (decision) {
-                        case "s":
+                        case "si":
                             System.out.println("¿Qué valor de propina agregará?");
                             propina = scanner.nextDouble();
                             scanner.nextLine();
@@ -125,7 +125,7 @@ public class MenuUsuario{
                     System.out.println("Saliendo...");
                     break;
                 default:
-                    System.out.println("Opción invalida");
+                    System.out.println("Opcion invalida");
             }
         } while (opcion != 5);
     }
