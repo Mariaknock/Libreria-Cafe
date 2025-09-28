@@ -37,7 +37,7 @@ public class MenuUsuario{
             switch (opcion) {
                 case 1:
                     inventario.mostrarLibros();
-                    System.out.println("El precio de la renta del libro es de " + Libro.getPrecioRenta());
+                    System.out.println("El precio de la renta del libro es el mismo para todos los libros, precio de renta: " + Libro.getPrecioRenta());
                     nombres.add("Renta de libro");
                     precios.add(Libro.getPrecioRenta());
                     break;
@@ -49,6 +49,7 @@ public class MenuUsuario{
                     nombres.add(inventario.getLibros().get(id).getTituloLibro());
                     precios.add(inventario.getLibros().get(id).getPrecio());
                     inventario.getLibros().get(id).decrementarStock();
+                    System.out.println("Ha comprado el libro " + inventario.getLibros().get(id).getTituloLibro());
                     break;
                 case 3:
 
@@ -75,7 +76,7 @@ public class MenuUsuario{
                                 nombres.add(bebida.getNombre());
                                 precios.add(bebida.getPrecio());
                                 inventario.getBebidas().get(id).decrementarStock();
-                                System.out.println("Bebida agregada al pedido");
+                                System.out.println(inventario.getBebidas().get(id).getNombre()+" agregada al pedido");
                             }else{
                                 System.out.println("ID de bebida no valido");
                             }
@@ -91,7 +92,7 @@ public class MenuUsuario{
                                 nombres.add(comida.getNombre());
                                 precios.add(comida.getPrecio());
                                 inventario.getComidas().get(id).decrementarStock();
-                                System.out.println("Comida agregada al pedido");
+                                System.out.println(inventario.getComidas().get(id).getNombre()+" agregada al pedido");
                             }else{
                                 System.out.println("ID de comida no valido");
                             }
