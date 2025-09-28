@@ -2,12 +2,14 @@ package Menus;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import Articulos.Libro;
+
 public class MenuUsuario{
     
     private Scanner scanner =new Scanner(System.in);
     private int opcion;
     public void mostrarMenuUsuario(){
-        ArrayList<Integer> precios = new ArrayList<>();
+        ArrayList<Double> precios = new ArrayList<>();
         do {
             System.out.println("--- BIENVENIDO AL SERVICIO DE CAFÉ-LIBRERÍA ---");
             System.out.println("\nSeleccione una opción:");
@@ -21,7 +23,8 @@ public class MenuUsuario{
             scanner.nextLine();
             switch (opcion) {
                 case 1:
-                    System.out.println("El precio de la renta del libro es de");
+                    System.out.println("El precio de la renta del libro es de" + Libro.getPrecioRenta());
+                    precios.add(Libro.getPrecioRenta());
                     break;
                 case 2:
                     break;
