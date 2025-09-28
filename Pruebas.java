@@ -1,16 +1,4 @@
 import Articulos.Inventario;
-/*<<<<<<< HEAD
-import Menus.MenuAdmin;
-import Menus.MenuUsuario;
-public class Pruebas{
-	public static void main(String[] args) {
-		Inventario inventario = new Inventario();
-		//MenuAdmin menuAdmin=new MenuAdmin(inventario);
-		//menuAdmin.mostrarMenu();
-
-		MenuUsuario menuUsuario=new MenuUsuario(inventario);
-		menuUsuario.mostrarMenuUsuario();
-======= */
 import Menus.*;
 import java.util.Scanner;
 public class Pruebas{
@@ -36,7 +24,7 @@ public class Pruebas{
 					menuUser.mostrarMenuUsuario();
 					break;
 				case 3:
-					System.out.println("Salio del progrma");
+					System.out.println("Salio del programa");
 					break;
 				default:
 					System.out.println("Escoja una opcion valida");

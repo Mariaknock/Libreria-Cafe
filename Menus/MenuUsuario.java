@@ -64,14 +64,16 @@ public class MenuUsuario{
                         scanner.nextLine();
 
                         switch(opcionCom){
-                            case 1:
+                           case 1:
                             System.out.println("--- BEBIDAS EN EXISTENCIA ---");
-                            for(Bebida bebida: inventario.getBebidas().values()){
+                            /*for(Bebida bebida: inventario.getBebidas().values()){
                                 System.out.println("ID: "+bebida.getId());
                                 System.out.println("Nombre: "+bebida.getNombre());
                                 System.out.println("Tamaño: "+bebida.getTamaño());
                                 System.out.println("Precio: "+bebida.getPrecio());
                             }
+                            */
+                            inventario.mostrarBebidas();
                             System.out.println("Ingrese el ID de la bebida que quieres: ");
                             int idBebida= scanner.nextInt();
                             scanner.nextLine();
@@ -86,13 +88,15 @@ public class MenuUsuario{
                             }
                             break;
                             case 2:
-                            System.out.println("--- BEBIDAS EN EXISTENCIA ---");
-                            for(Comida comida: inventario.getComidas().values()){
+                            System.out.println("---COMINDAS EN EXISTENCIA ---");
+                            /*for(Comida comida: inventario.getComidas().values()){
                                 System.out.println("ID: "+comida.getId());
                                 System.out.println("Nombre: "+comida.getNombre());
                                 System.out.println("Tamaño: "+comida.getTamaño());
                                 System.out.println("Precio: "+comida.getPrecio());
                             }
+                            */
+                            inventario.mostrarComidas();
                             System.out.println("Ingrese el ID de la comida que quieres: ");
                             int idComida= scanner.nextInt();
                             scanner.nextLine();

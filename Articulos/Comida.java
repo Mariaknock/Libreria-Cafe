@@ -75,7 +75,7 @@ public class Comida {
         System.out.println("Tamaño: "+getTamaño());
         System.out.println("Precio "+getPrecio());
         System.out.println("Categoria: "+getCategoria());
-        System.out.println("Precio "+getCantidad());
+        System.out.println("Stock"+getCantidad());
         System.out.println("ID: "+ getId());
     }
 }
