@@ -26,11 +26,13 @@ public class MenuUsuario{
             scanner.nextLine();
             switch (opcion) {
                 case 1:
+                    inventario.mostrarLibros();
                     System.out.println("El precio de la renta del libro es de " + Libro.getPrecioRenta());
                     nombres.add("Renta de libro");
                     precios.add(Libro.getPrecioRenta());
                     break;
                 case 2:
+                    inventario.mostrarLibros();
                     System.out.println("Elige el ID del libro a comprar: ");
                     id = scanner.nextInt();
                     scanner.nextLine();
