@@ -105,16 +105,6 @@ public class Inventario{
         this.bebidas.put(bebida.getId(),bebida);
     }
 
-    public void eliminarComida(int id){
-        this.comidas.remove(id);
-    }
-    public void eliminarLibro(int id){
-        this.libros.remove(id);
-    }
-    public void eliminarBebida(int id){
-        this.bebidas.remove(id);
-    }
-    
     public void mostrarLibros()
     {
         System.out.printf("%-35s %-10s\n", "TÍTULO DEL LIBRO", "ID DEL LIBRO");

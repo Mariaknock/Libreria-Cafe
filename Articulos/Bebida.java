@@ -73,6 +73,14 @@ public class Bebida{
         return id;
     }
 
+    public boolean decrementarStock() {
+        if (this.cantidad > 0) {
+            this.cantidad -= 1; 
+            return true; 
+        }
+        return false;
+    }
+
 
     public void mostrarBebida(){
         System.out.println("Nombre: "+getNombre());

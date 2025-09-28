@@ -62,6 +62,13 @@ public class Comida {
     {
         return id;
     }
+    public boolean decrementarStock() {
+        if (this.cantidad > 0) {
+            this.cantidad -= 1; 
+            return true; 
+        }
+        return false;
+    }
 
     public void mostrarComida(){
         System.out.println("Nombre: "+getNombre());
