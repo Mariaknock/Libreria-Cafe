@@ -1,5 +1,5 @@
 import Articulos.Inventario;
-<<<<<<< HEAD
+/*<<<<<<< HEAD
 import Menus.MenuAdmin;
 import Menus.MenuUsuario;
 public class Pruebas{
@@ -10,7 +10,7 @@ public class Pruebas{
 
 		MenuUsuario menuUsuario=new MenuUsuario(inventario);
 		menuUsuario.mostrarMenuUsuario();
-=======
+======= */
 import Menus.*;
 import java.util.Scanner;
 public class Pruebas{
@@ -43,6 +43,5 @@ public class Pruebas{
 					break;
 			}
 		}while(opcion!=3);
->>>>>>> 45e0c015a93bd6d5790d77e13150c99b41aecf31
 	}
 }
