@@ -10,6 +10,7 @@ public class MenuUsuario{
     private int opcion;
     public void mostrarMenuUsuario(){
         ArrayList<Double> precios = new ArrayList<>();
+        ArrayList<String> nombres = new ArrayList<>();
         do {
             System.out.println("--- BIENVENIDO AL SERVICIO DE CAFÉ-LIBRERÍA ---");
             System.out.println("\nSeleccione una opción:");
@@ -23,7 +24,8 @@ public class MenuUsuario{
             scanner.nextLine();
             switch (opcion) {
                 case 1:
-                    System.out.println("El precio de la renta del libro es de" + Libro.getPrecioRenta());
+                    System.out.println("El precio de la renta del libro es de " + Libro.getPrecioRenta());
+                    nombres.add("Renta de libro");
                     precios.add(Libro.getPrecioRenta());
                     break;
                 case 2:

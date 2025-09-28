@@ -49,13 +49,13 @@ public class Cuenta{
         }
         montoTotal = total + (total/propina);
     }
-    public void recibo(ArrayList<Double> precios){
+    public void recibo(ArrayList<Double> precios, ArrayList<String> nombres){
         System.out.println("----- RECIBO -----");
         System.out.println("ID de cuenta: " + id);
         System.out.println("Cliente: " + (cliente != null ? cliente.toString() : "N/A"));
         System.out.println("Precios:");
         for (int i = 0; i < precios.size(); i++) {
-            System.out.println("  Producto " + (i + 1) + ": $" + precios.get(i));
+            System.out.println("  Producto " + nombres.get(i) + ": $" + precios.get(i));
         }
         double subtotal = 0;
         for (Double precio : precios) {
