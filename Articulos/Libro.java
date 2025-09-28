@@ -91,13 +91,13 @@ public class Libro
     }
 
 	public void mostrarLibro() {
-    System.out.println("Título: " + this.tituloLibro);
-    System.out.println("Número de páginas: " + this.numPaginas);
-    System.out.println("Editorial: " + this.editorial);
-    System.out.println("Autor: " + this.autor);
-    System.out.println("Precio: " + this.precio);
-    System.out.println("ID: " + this.id);
-	System.out.println("Stock " + this.cantidad);
-	System.out.println("Precio renta "+ precioRenta);
+		System.out.println("Título: " + this.tituloLibro);
+		System.out.println("Número de páginas: " + this.numPaginas);
+		System.out.println("Editorial: " + this.editorial);
+		System.out.println("Autor: " + this.autor);
+		System.out.println("Precio: " + this.precio);
+		System.out.println("ID: " + this.id);
+		System.out.println("Stock " + this.cantidad);
+		System.out.println("Precio renta "+ precioRenta);
 	}
 }
