@@ -1,7 +1,9 @@
+import Articulos.Inventario;
 import Menus.MenuAdmin;
 public class Pruebas{
 	public static void main(String[] args) {
-	MenuAdmin menuAdmin=new MenuAdmin();
-	menuAdmin.mostrarMenu();
+		Inventario inventario = new Inventario();
+		MenuAdmin menuAdmin=new MenuAdmin(inventario);
+		menuAdmin.mostrarMenu();
 	}
 }

@@ -35,7 +35,7 @@ public class MenuUsuario{
                     System.out.println("Elige el ID del libro a comprar: ");
                     id = scanner.nextInt();
                     scanner.nextLine();
-                    nombres.add()
+                    nombres.add("");
                     break;
                 case 3:
                     break;
