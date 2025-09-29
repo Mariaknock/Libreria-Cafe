@@ -122,13 +122,8 @@ public class MenuUsuario{
                     System.out.println("¿Seguro que quiere su orden? El programa saldrá del menú de usuario (si/no)");
                     decision = scanner.nextLine();
                     switch (decision) {
-<<<<<<< HEAD
-                        case "s":
-                            System.out.println("¿Que valor de propina agregará?");
-=======
                         case "si":
                             System.out.println("¿Qué valor de propina agregará?");
->>>>>>> 27a2588f19fdb8663f27165da725ce39d0b8922f
                             propina = scanner.nextDouble();
                             scanner.nextLine();
                             Cuenta cuenta = new Cuenta(cliente, propina, precios);
