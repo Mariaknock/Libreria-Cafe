@@ -24,6 +24,7 @@ public class Principal{
 					menuUser.mostrarMenuUsuario();
 					break;
 				case 3:
+                    System.out.println("Hasta luego :D");
 					System.out.println("Salio del programa");
 					break;
 				default:

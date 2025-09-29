@@ -45,7 +45,7 @@ public class MenuAdmin {
            System.out.println("2) Modificar o eliminar libro existente");
            System.out.println("3) Registrar cliente de la cafe-libreria");
            System.out.println("4) Consultar informacion de clientes de la cafe-libreria");
-           System.out.println("5) Consultar libros existentes");
+           System.out.println("5) Consultar Inventario");
            System.out.println("6) Agregar Comida - Bebida");
            System.out.println("7) Salir ");
            opcion=scanner.nextInt();
@@ -107,7 +107,15 @@ public class MenuAdmin {
                 }
                     break;
                 case 5:
+                    System.out.printf("%54s %s\n","","----LIBROS EXISTENTES----\n");
                     inventario.mostrarLibros();
+                    System.out.printf("\n\n");
+                    System.out.printf("%44s %s\n","","----COMIDAS EXISTENTES----\n");
+                    inventario.mostrarComidas();
+                    System.out.printf("\n\n");
+                    System.out.printf("%34s %s\n","","----BEBIDAS EXISTENTES----\n");
+                    inventario.mostrarBebidas();
+                    System.out.printf("\n\n");
                     break;
                 case 6:
                     agregarComida();

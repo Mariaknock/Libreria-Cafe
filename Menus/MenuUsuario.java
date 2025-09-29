@@ -57,6 +57,7 @@ public class MenuUsuario{
                     precios.add(Libro.getPrecioRenta());
                     break;
                 case 2:
+                    System.out.printf("%54s %s\n","","----LIBROS EXISTENTES----\n");
                     inventario.mostrarLibros();
                     System.out.println("Elige el ID del libro a comprar: ");
                     int idLibro = scanner.nextInt();
@@ -81,7 +82,7 @@ public class MenuUsuario{
 
                         switch(opcionCom){
                            case 1:
-                            System.out.println("--- BEBIDAS EN EXISTENCIA ---");
+                            System.out.printf("%34s %s\n","","----BEBIDAS EXISTENTES----\n");
                             inventario.mostrarBebidas();
                             System.out.println("Ingrese el ID de la bebida que quieres: ");
                             int idBebida= scanner.nextInt();
@@ -97,7 +98,7 @@ public class MenuUsuario{
                             }
                             break;
                             case 2:
-                            System.out.println("---COMINDAS EN EXISTENCIA ---");
+                            System.out.printf("%44s %s\n","","----COMIDAS EXISTENTES----\n");
                             inventario.mostrarComidas();
                             System.out.println("Ingrese el ID de la comida que quieres: ");
                             int idComida= scanner.nextInt();
