@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import Articulos.*;
 import Cliente.*;
+import java.util.HashSet;
+import java.util.Set;
 public class MenuUsuario{
     
     private Scanner scanner =new Scanner(System.in);
@@ -10,17 +12,28 @@ public class MenuUsuario{
     private double propina;
     private Inventario inventario;
     private String decision, nombre, correo;
+    private Set<String> nombres;
 
     public MenuUsuario(Inventario inventario){
         this.inventario = inventario;
     }
+    public void librosRenta(){
+        nombres = new HashSet<>();
+        for (Libro elemento : inventario.getLibros().values()) {
+            nombres.add(elemento.getTituloLibro());
+        }
+        System.out.println("Libros para rentar: ");
+        for (String libro : nombres){
+            System.out.println(libro);
+        }
+    }
     public void mostrarMenuUsuario(){
         ArrayList<Double> precios = new ArrayList<>();
         ArrayList<String> nombres = new ArrayList<>();
-        System.out.println("--- BIENVENIDO AL SERVICIO DE CAFÉ-LIBRERÍA ---");
+        System.out.println("--- BIENVENIDO AL SERVICIO DE CAFE-LIBRERIA ---");
         System.out.println("¿Cuál es tu nombre? ");
         nombre = scanner.nextLine();
-        System.out.println("¿Cuál es tu correo? ");
+        System.out.println("¿Cual es tu correo? ");
         correo = scanner.nextLine();
         Cliente cliente = new Cliente(nombre, correo);
 
@@ -28,15 +41,15 @@ public class MenuUsuario{
             System.out.println("\nSeleccione una opción:");
             System.out.println("1. Rentar Libro");
             System.out.println("2. Comprar Libro");
-            System.out.println("3. Pedir Café/Comida");
+            System.out.println("3. Pedir Cafe/Comida");
             System.out.println("4. Pedir la Cuenta");
             System.out.println("5. Salir");
-            System.out.print("Opción: ");
+            System.out.print("Opcion: ");
             opcion = scanner.nextInt();
             scanner.nextLine();
             switch (opcion) {
                 case 1:
-                    inventario.mostrarLibros();
+                    librosRenta();
                     System.out.println("El precio de la renta del libro es el mismo para todos los libros, precio de renta: " + Libro.getPrecioRenta());
                     nombres.add("Renta de libro");
                     precios.add(Libro.getPrecioRenta());
@@ -109,8 +122,13 @@ public class MenuUsuario{
                     System.out.println("¿Seguro que quiere su orden? El programa saldrá del menú de usuario (si/no)");
                     decision = scanner.nextLine();
                     switch (decision) {
+<<<<<<< HEAD
+                        case "s":
+                            System.out.println("¿Que valor de propina agregará?");
+=======
                         case "si":
                             System.out.println("¿Qué valor de propina agregará?");
+>>>>>>> 27a2588f19fdb8663f27165da725ce39d0b8922f
                             propina = scanner.nextDouble();
                             scanner.nextLine();
                             Cuenta cuenta = new Cuenta(cliente, propina, precios);
