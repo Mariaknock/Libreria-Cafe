@@ -125,7 +125,6 @@ public class MenuAdmin {
 
        }while(opcion!=7);
     }
-
     public void login(){
 
        do{
@@ -138,51 +137,56 @@ public class MenuAdmin {
 
     public void modificarLibro(Map<Integer, Libro> libros)
     {
+
         inventario.mostrarLibros();
-        System.out.println("!Escoge el ID del libro para modificar");
+        System.out.println("Escoge el ID del libro para modificar");
         idLibro=scanner.nextInt();
         scanner.nextLine();
-        do {
-            System.out.println("---Modificaciones---");
-            System.out.println("1. Numero de páginas");
-            System.out.println("2. Editorial");
-            System.out.println("3. Precio");
-            System.out.println("4. Cantidad (Stock)");
-            System.out.println("5. Salir");
-            System.out.print("Opción: ");
-            opcion=scanner.nextInt();
-            scanner.nextLine();
-            switch (opcion) {
-                case 1:
-                    System.out.println("Ingrese el nuevo numero de paginas del libro");
-                    numPaginas=scanner.nextInt();
-                    scanner.nextLine();
-                    libros.get(idLibro).setNumPaginas(numPaginas);
-                    break; 
-                case 2:
-                    System.out.println("Ingrese la nueva editorial");
-                    editorial=scanner.nextLine();
-                    libros.get(idLibro).setEditorial(editorial);
-                    break; 
-                case 3:
-                    System.out.println("Ingrese el nuevo precio del libro");
-                    precio=scanner.nextDouble();
-                    scanner.nextLine();
-                    libros.get(idLibro).setPrecio(precio);
-                    break; 
-                case 4:
-                    System.out.println("Ingrese la nueva cantidad de libros");
-                    cantidad=scanner.nextInt();
-                    scanner.nextLine();
-                    libros.get(idLibro).setCantidad(cantidad);
-                    break;  
-                case 5:
-                    System.out.println("Saliendo del gestor de modificaciones");
-                    break;
-                default:
-                    System.out.println("Opcion no reconocida.");
-            }
-        } while (opcion != 5);
+        if(libros.containsKey(idLibro)){
+            do {
+                System.out.println("---Modificaciones---");
+                System.out.println("1. Numero de páginas");
+                System.out.println("2. Editorial");
+                System.out.println("3. Precio");
+                System.out.println("4. Cantidad (Stock)");
+                System.out.println("5. Salir");
+                System.out.print("Opción: ");
+                opcion=scanner.nextInt();
+                scanner.nextLine();
+                switch (opcion) {
+                    case 1:
+                        System.out.println("Ingrese el nuevo numero de paginas del libro");
+                        numPaginas=scanner.nextInt();
+                        scanner.nextLine();
+                        libros.get(idLibro).setNumPaginas(numPaginas);
+                        break; 
+                    case 2:
+                        System.out.println("Ingrese la nueva editorial");
+                        editorial=scanner.nextLine();
+                        libros.get(idLibro).setEditorial(editorial);
+                        break; 
+                    case 3:
+                        System.out.println("Ingrese el nuevo precio del libro");
+                        precio=scanner.nextDouble();
+                        scanner.nextLine();
+                        libros.get(idLibro).setPrecio(precio);
+                        break; 
+                    case 4:
+                        System.out.println("Ingrese la nueva cantidad de libros");
+                        cantidad=scanner.nextInt();
+                        scanner.nextLine();
+                        libros.get(idLibro).setCantidad(cantidad);
+                        break;  
+                    case 5:
+                        System.out.println("Saliendo del gestor de modificaciones");
+                        break;
+                    default:
+                        System.out.println("Opcion no reconocida.");
+                }
+            } while (opcion != 5);
+        }else{
+            System.out.println("ID de libro no valido");
+        }
     }
 
     public void eliminarLibro(Map<Integer, Libro> libros)
@@ -191,10 +195,14 @@ public class MenuAdmin {
         System.out.println("Escoge el ID del libro para eliminar");
         idLibro=scanner.nextInt();
         scanner.nextLine();
-        if(libros.get(idLibro).decrementarStock()){
-            System.out.println(libros.get(idLibro).getTituloLibro()+ " ELIMINADO");
-        }else{
+        if(libros.containsKey(idLibro)){
+            if(libros.get(idLibro).decrementarStock()){
+                System.out.println(libros.get(idLibro).getTituloLibro()+ " ELIMINADO");
+            }else{
             System.out.println(libros.get(idLibro).getTituloLibro()+ " YA NO HAY EN STOCK");
+            }  
+        }else{
+            System.out.println("ID de libro no valido");
         }
     }
     
