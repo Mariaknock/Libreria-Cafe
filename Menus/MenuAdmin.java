@@ -108,10 +108,6 @@ public class MenuAdmin {
                     break;
                 case 5:
                     inventario.mostrarLibros();
-                    System.out.println("Ingrese el ID del libro para mostrar sus especificaciones");
-                    idLibro=scanner.nextInt();
-                    scanner.nextLine();
-                    libros.get(idLibro).mostrarLibro();
                     break;
                 case 6:
                     agregarComida();

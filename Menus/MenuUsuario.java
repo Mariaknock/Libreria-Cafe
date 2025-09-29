@@ -17,6 +17,7 @@ public class MenuUsuario{
     public MenuUsuario(Inventario inventario){
         this.inventario = inventario;
     }
+
     public void librosRenta(){
         nombres = new HashSet<>();
         for (Libro elemento : inventario.getLibros().values()) {
@@ -27,6 +28,7 @@ public class MenuUsuario{
             System.out.println(libro);
         }
     }
+    
     public void mostrarMenuUsuario(){
         ArrayList<Double> precios = new ArrayList<>();
         ArrayList<String> nombres = new ArrayList<>();

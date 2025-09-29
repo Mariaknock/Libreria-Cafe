@@ -1,7 +1,7 @@
 import Articulos.Inventario;
 import Menus.*;
 import java.util.Scanner;
-public class Pruebas{
+public class Principal{
 	public static void main(String[] args) {
 		Inventario inventario = new Inventario();
 		Scanner scanner= new Scanner(System.in);

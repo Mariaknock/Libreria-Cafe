@@ -107,23 +107,47 @@ public class Inventario{
 
     public void mostrarLibros()
     {
-        System.out.printf("%-35s %-10s %-10s\n", "TITULO DEL LIBRO", "ID","PRECIO");
-        for (int i=1; i<=libros.size(); i++)
-            System.out.printf("%-35s %-10d %-10f\n",libros.get(i).getTituloLibro(),libros.get(i).getId(), libros.get(i).getPrecio());
+       System.out.printf("%-40s %-5s %-12s %-12s %-20s %-30s %-5s\n", "TITULO","ID","PRECIO","NUM.PAGINAS","EDITORIAL","AUTOR","STOCK");
+        for (int i = 1; i <= libros.size(); i++) {
+            System.out.printf("%-40s %-5d %-12.2f %-12d %-20s %-30s %-5d\n",
+            libros.get(i).getTituloLibro(),     
+            libros.get(i).getId(),              
+            libros.get(i).getPrecio(),          
+            libros.get(i).getNumPaginas(),      
+            libros.get(i).getEditorial(),       
+            libros.get(i).getAutor(),           
+            libros.get(i).getCantidad()            
+            );
+        } 
     }
 
     public void mostrarComidas()
     {
-        System.out.printf("%-35s %-10s %-10s\n", "COMIDA", "ID","PRECIO");
-        for (int i=1; i<=libros.size(); i++)
-            System.out.printf("%-35s %-10d %-10f\n",comidas.get(i).getNombre(), comidas.get(i).getId(), comidas.get(i).getPrecio());
+        System.out.printf("%-35s %-10s %-13s %-13s %-13s %-13s\n", "COMIDA","ID","PRECIO","TAMAÑO","CATEGORIA","STOCK");
+        for (int i = 1; i <= comidas.size(); i++) {
+            System.out.printf("%-35s %-10d %-13.2f %-13s %-13s %-13d\n",
+                comidas.get(i).getNombre(),        
+                comidas.get(i).getId(),             
+                comidas.get(i).getPrecio(),         
+                comidas.get(i).getTamaño(),         
+                comidas.get(i).getCategoria(),      
+                comidas.get(i).getCantidad()        
+            );
+        }
     }
 
      public void mostrarBebidas()
     {
-        System.out.printf("%-35s %-10s %-10s\n", "BEBIDA", "ID","PRECIO");
-        for (int i=1; i<=libros.size(); i++)
-            System.out.printf("%-35s %-10d %-10f\n",bebidas.get(i).getNombre(), bebidas.get(i).getId(), bebidas.get(i).getPrecio());
+        System.out.printf("%-35s %-10s %-13s %-13s %-13s\n", "BEBIDA","ID","PRECIO","TAMAÑO","STOCK");
+        for (int i = 1; i <= bebidas.size(); i++) {
+            System.out.printf("%-35s %-10d %-13.2f %-13s %-13d\n",
+                bebidas.get(i).getNombre(),        
+                bebidas.get(i).getId(),             
+                bebidas.get(i).getPrecio(),         
+                bebidas.get(i).getTamaño(),         
+                bebidas.get(i).getCantidad()        
+            );
+        }
             
     }
 }
